@@ -524,14 +524,10 @@ parse_sort_criteria(char *sortCriteria, int *error)
 		{
 			strcatf(&str, "o.CLASS");
 		}
-		else if( strcasecmp(item, "dc:title") == 0 )
+		else if( strcasecmp(item, "dc:title") == 0 || strcasecmp(item, "dc:date") == 0 )
 		{
 			strcatf(&str, "d.TITLE");
 			title_sorted = 1;
-		}
-		else if( strcasecmp(item, "dc:date") == 0 )
-		{
-			strcatf(&str, "d.DATE");
 		}
 		else if( strcasecmp(item, "upnp:originalTrackNumber") == 0 )
 		{
